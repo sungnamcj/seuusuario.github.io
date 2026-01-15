@@ -1,47 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SeuUsuario — Home</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sung Nam Alves Bautista — CV</title>
+  <meta name="description" content="Currículo e contatos — Sung Nam Alves Bautista" />
+  <style>
+    :root { --bg:#0d1321; --card:#12233f; --text:#e8eefc; --muted:#a9b7d6; --accent:#6ea8fe; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(120deg,#090c18,var(--bg));color:var(--text)}
+    .wrap{max-width:920px;margin:0 auto;padding:36px 18px}
+    .card{background:rgba(18,35,63,.85);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    h1{margin:0 0 6px;font-size:32px} .role{color:var(--muted);margin:0 0 18px;font-size:16px}
+    .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;text-decoration:none;font-weight:600}
+    .btn.primary{background:var(--accent);color:#071022}
+    .btn.ghost{border:1px solid rgba(255,255,255,.14);color:var(--text)}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
+    @media(min-width:820px){.grid{grid-template-columns:1.2fr .8fr}}
+    h2{margin:0 0 8px;font-size:18px} ul{margin:8px 0 0 18px;color:var(--muted)}
+    .small{color:var(--muted);font-size:13px;margin-top:18px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(110,168,254,.14);border:1px solid rgba(110,168,254,.25);color:var(--text);font-size:13px;margin:6px 6px 0 0}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>SeuUsuario</h1>
-      <nav><a href="#about">About</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a></nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>Sung Nam Alves Bautista</h1>
+      <p class="role">Technicien Helpdesk | Support & Gestion de Parc Informatique</p>
+
+      <p>
+        Technicien Helpdesk spécialisé dans la préparation, installation, configuration et gestion de postes informatiques, avec un accent sur la résolution rapide et efficace des problèmes utilisateurs.
+      </p>
+
+      <div class="row">
+        <a class="btn primary" href="./cv.pdf" download>📄 Télécharger mon CV (PDF)</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/sung-nam-alves-bautista" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn ghost" href="mailto:seuemail@exemplo.com">Email</a>
+      </div>
+
+      <div class="grid">
+        <div class="card" style="background:rgba(255,255,255,.03)">
+          <h2>Compétences Techniques</h2>
+          <div>
+            <span class="pill">Support & Troubleshooting</span>
+            <span class="pill">Gestion de Tickets</span>
+            <span class="pill">Windows & Active Directory</span>
+            <span class="pill">Office365 / OneDrive</span>
+            <span class="pill">Support à distance</span>
+            <span class="pill">Configuration de postes</span>
+            <span class="pill">Documentation technique</span>
+          </div>
+        </div>
+
+        <div class="card" style="background:rgba(255,255,255,.03)">
+          <h2>Compétences Interpersonnelles</h2>
+          <ul>
+            <li>Communication claire et patiente</li>
+            <li>Résolution efficace de problèmes</li>
+            <li>Organisation et gestion des priorités</li>
+            <li>Amélioration continue des processus</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="small">Dernière mise à jour: <span id="date"></span></p>
     </div>
-  </header>
+  </div>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Welcome to my GitHub Pages site</h2>
-      <p>Simple, fast, and ready to customize.</p>
-      <a class="btn" href="#about">Get started</a>
-    </section>
-
-    <section id="about">
-      <h3>About</h3>
-      <p>This is a personal GitHub Pages site generated for the repository <code>seuusuario.github.io</code>.</p>
-    </section>
-
-    <section id="projects">
-      <h3>Projects</h3>
-      <ul>
-        <li>Project 1</li>
-        <li>Project 2</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h3>Contact</h3>
-      <p>Reach me on GitHub: <a href="https://github.com/sungnamcj">@sungnamcj</a></p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© 2026 SeuUsuario</p>
-  </footer>
+  <script>document.getElementById("date").textContent = new Date().toLocaleDateString("fr-FR");</script>
 </body>
 </html>
